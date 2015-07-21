@@ -120,6 +120,23 @@ class ViewController: UIViewController {
     
     func saveNewItem(title : String, author: String, number: String) {
         println("\(title)")
+        
+        //Create new Book with user data
+        var newBook = Book.createInManagedObjectContext(self.managedObjectContext!, title: title, author: author, numPages: number)
+        
+        // Update the array containing the table view row data
+        self.fetchLog()
+        
+        // Animate in the new row
+        // Use Swift's find() function to figure out the index of the newLogItem
+        // after it's been added and sorted in our logItems array
+        if let newItemIndex = find(books, newBook) {
+            // Create an NSIndexPath from the newItemIndex
+            let newBookIndexPath = NSIndexPath(forRow: newItemIndex, inSection: 0)
+            // Animate in the insertion of this row
+            tableView.insertRowsAtIndexPaths([ newBookIndexPath ], withRowAnimation: .Automatic)
+            save()
+        }
     }
     
     func save() {

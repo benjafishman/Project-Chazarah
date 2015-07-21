@@ -19,9 +19,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jiz-WT-4zS">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="64" width="400" height="800"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="ucB-Xm-9WW"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Ajl-1l-vA6"/>
@@ -29,14 +26,32 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jiz-WT-4zS" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="3hI-7u-ahl"/>
+                            <constraint firstAttribute="centerX" secondItem="jiz-WT-4zS" secondAttribute="centerX" id="Uc4-EK-haN"/>
+                            <constraint firstItem="jiz-WT-4zS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="bUz-LB-3a1"/>
+                            <constraint firstAttribute="centerY" secondItem="jiz-WT-4zS" secondAttribute="centerY" constant="-64" id="qi0-sX-s2A"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="jiz-WT-4zS"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3hI-7u-ahl"/>
+                                <exclude reference="Uc4-EK-haN"/>
+                                <exclude reference="bUz-LB-3a1"/>
+                                <exclude reference="qi0-sX-s2A"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="jiz-WT-4zS"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3hI-7u-ahl"/>
+                                <include reference="Uc4-EK-haN"/>
+                                <include reference="bUz-LB-3a1"/>
+                                <include reference="qi0-sX-s2A"/>
                             </mask>
                         </variation>
                     </view>

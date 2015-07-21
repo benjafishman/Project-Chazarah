@@ -2,41 +2,48 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="149" id="06B-rt-O9g" customClass="BookTableViewCell" customModule="Project_Chazarah" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="394" height="149"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="83" id="06B-rt-O9g" customClass="BookTableViewCell" customModule="Project_Chazarah" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="394" height="82"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="06B-rt-O9g" id="WE5-TS-Win">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Author" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bb-DU-yeX">
-                        <rect key="frame" x="128" y="82" width="139" height="40"/>
-                        <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8J-cg-9uY">
+                        <rect key="frame" x="92" y="8" width="210" height="40"/>
+                        <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="38"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8J-cg-9uY">
-                        <rect key="frame" x="92" y="34" width="210" height="40"/>
-                        <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="52"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bb-DU-yeX">
+                        <rect key="frame" x="128" y="48" width="139" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="139" id="1rQ-Gh-7K8"/>
+                            <constraint firstAttribute="height" constant="33" id="hxt-ux-ioe"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstAttribute="centerY" secondItem="l8J-cg-9uY" secondAttribute="centerY" constant="20.5" id="6dJ-Ue-3ex"/>
-                    <constraint firstAttribute="centerX" secondItem="l8J-cg-9uY" secondAttribute="centerX" id="Cdt-sQ-aUe"/>
-                    <constraint firstAttribute="centerX" secondItem="5bb-DU-yeX" secondAttribute="centerX" constant="-0.5" id="GmY-vv-Tca"/>
-                    <constraint firstAttribute="centerY" secondItem="5bb-DU-yeX" secondAttribute="centerY" constant="-27.5" id="UTf-Bb-Ixt"/>
+                    <constraint firstItem="5bb-DU-yeX" firstAttribute="centerX" secondItem="l8J-cg-9uY" secondAttribute="centerX" id="09U-LB-8pW"/>
+                    <constraint firstAttribute="bottom" secondItem="5bb-DU-yeX" secondAttribute="bottom" id="9NP-Zd-9cE"/>
+                    <constraint firstItem="l8J-cg-9uY" firstAttribute="top" secondItem="WE5-TS-Win" secondAttribute="topMargin" id="A4k-7k-VJc"/>
+                    <constraint firstItem="5bb-DU-yeX" firstAttribute="top" secondItem="l8J-cg-9uY" secondAttribute="bottom" id="CBw-4G-9dA"/>
+                    <constraint firstItem="l8J-cg-9uY" firstAttribute="leading" secondItem="WE5-TS-Win" secondAttribute="leadingMargin" constant="84" id="FeA-P2-L2y"/>
+                    <constraint firstItem="l8J-cg-9uY" firstAttribute="centerX" secondItem="WE5-TS-Win" secondAttribute="centerX" id="snk-4W-OUn"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="authorLabel" destination="5bb-DU-yeX" id="mZk-fo-fHX"/>
                 <outlet property="titleLabel" destination="l8J-cg-9uY" id="MdP-y4-5Zp"/>
             </connections>
-            <point key="canvasLocation" x="350" y="265.5"/>
+            <point key="canvasLocation" x="258" y="214"/>
         </tableViewCell>
     </objects>
 </document>

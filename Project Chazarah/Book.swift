@@ -18,6 +18,31 @@ class Book: NSManagedObject {
     @NSManaged var category: String
     @NSManaged var logs: NSSet
     
+    class func createInManagedObjectContext(moc: NSManagedObjectContext, title: String, author: String, numPages: String) -> Book {
+        
+        let newBook = NSEntityDescription.insertNewObjectForEntityForName("Book", inManagedObjectContext: moc) as Book
+        
+        newBook.title = title
+        
+        newBook.author = author
+        
+        newBook.numPages = NSNumber(integer: numPages.toInt()!)
+        
+        // Current date
+        
+        let date = NSDate()
+        
+        newBook.startDate = date
+        
+        //let formatterDate = NSDateFormatter()
+        
+        //formatterDate.dateStyle = .ShortStyle //Set style of date
+        
+        
+        
+        return newBook
+    }
+    
     
     func getTitle() -> String {
         return title
