@@ -187,6 +187,11 @@ class ViewController: UIViewController {
         
         self.performSegueWithIdentifier("passBookSegue", sender: self)
     }
+    func tableView(tableView: UITableView,
+        estimatedHeightForRowAtIndexPath
+        indexPath: NSIndexPath) -> CGFloat {
+            return UITableViewAutomaticDimension
+    }
 
 
     override func didReceiveMemoryWarning() {
