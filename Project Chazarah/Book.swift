@@ -37,15 +37,18 @@ class Book: NSManagedObject {
         //let formatterDate = NSDateFormatter()
         
         //formatterDate.dateStyle = .ShortStyle //Set style of date
-        
-        
-        
+    
         return newBook
     }
     
     
     func getTitle() -> String {
         return title
+    }
+    
+    func addLog(item:Log) {
+        
+        self.mutableSetValueForKey("logs").addObject(item)
     }
 
 }

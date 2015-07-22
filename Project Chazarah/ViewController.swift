@@ -45,19 +45,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        title = "Learnings!"
+        title = "ספרים"
         
         var nib = UINib(nibName: "BookTableViewCell", bundle: nil)
         
         tableView.registerNib(nib, forCellReuseIdentifier: "bookCell")
         
         fetchLog()
-        
-        //println(managedObjectContext)
-        
-        //let newItem = NSEntityDescription.insertNewObjectForEntityForName("Learning", inManagedObjectContext: self.managedObjectContext!) as Learning
-        
-        //tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+    
     }
     
     func fetchLog() {
@@ -124,6 +119,21 @@ class ViewController: UIViewController {
         //Create new Book with user data
         var newBook = Book.createInManagedObjectContext(self.managedObjectContext!, title: title, author: author, numPages: number)
         
+        /*
+        * Doin some fake jazz to preload logItem2, i.e. not production worthy code
+        */
+        for var i = 0; i < 3; i++
+        {
+            println("here \(i)")
+            var newNote = title + " :log-\(i)"
+            
+            var newLog = Log.createInManagedObjectContext(self.managedObjectContext!, note: newNote, book: newBook)
+            
+            newBook.addLog(newLog)
+            
+            //newLogItem2.logitem = newLogItem
+        }
+        
         // Update the array containing the table view row data
         self.fetchLog()
         
@@ -162,6 +172,7 @@ class ViewController: UIViewController {
             let book = books[indexPath.row]
             
             cell.setTitle(book.title)
+            cell.setAuthor(book.author)
             
             return cell
     }
@@ -169,12 +180,33 @@ class ViewController: UIViewController {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         println("CLICKED CELL")
+        
+        let book = books[indexPath.row]
+                
+        passedBook = book
+        
+        self.performSegueWithIdentifier("passBookSegue", sender: self)
     }
 
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        
+        
+        if(segue.identifier == "passBookSegue") {
+            
+            let navVC = segue.destinationViewController as UINavigationController
+            
+            if let vc = navVC.topViewController as? LogViewController {
+                vc.passedBook = passedBook!
+            }
+        }
+        
+        
     }
 
 }

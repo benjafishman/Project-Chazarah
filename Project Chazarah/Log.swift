@@ -15,5 +15,32 @@ class Log: NSManagedObject {
     @NSManaged var date: NSDate
     @NSManaged var note: String
     @NSManaged var book: Project_Chazarah.Book
+    
+    class func createInManagedObjectContext(moc: NSManagedObjectContext, note: String, book: Book) -> Log {
+        
+        let newLog = NSEntityDescription.insertNewObjectForEntityForName("Log", inManagedObjectContext: moc) as Log
+        
+        newLog.note = note
+        
+        newLog.current_page = 0
+        
+        newLog.book = book
+        
+        // Current date
+        
+        let date = NSDate()
+        
+        newLog.date = date
+        
+        //let formatterDate = NSDateFormatter()
+        
+        //formatterDate.dateStyle = .ShortStyle //Set style of date
+        
+        return newLog
+    }
+    
+    func getNote() -> String {
+        return note
+    }
 
 }

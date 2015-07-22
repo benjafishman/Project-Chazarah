@@ -64,11 +64,54 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="jiz-WT-4zS" id="ZLF-wc-9bt"/>
+                        <segue destination="qWb-cX-wHC" kind="show" identifier="passBookSegue" id="JSq-bX-jBA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1104" y="-1109.25"/>
+            <point key="canvasLocation" x="480" y="-1196.25"/>
+        </scene>
+        <!--Log View Controller-->
+        <scene sceneID="egQ-68-byq">
+            <objects>
+                <viewController id="VR0-V5-H6I" customClass="LogViewController" customModule="Project_Chazarah" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CT5-mh-hbY"/>
+                        <viewControllerLayoutGuide type="bottom" id="xgm-5x-UqS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="waW-TG-xau">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAF-Oa-Hp2">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="157" y="136" width="67" height="55"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.74592391300000005" green="0.74592391300000005" blue="0.74592391300000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="xAF-Oa-Hp2"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="xAF-Oa-Hp2"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="suP-AY-Zfv"/>
+                    <connections>
+                        <outlet property="label" destination="xAF-Oa-Hp2" id="1qQ-gG-tnN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E3f-Fw-oVJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2340" y="-1179.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1TR-fT-wDY">
@@ -86,7 +129,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PD0-VF-Kjr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="234" y="-1097.25"/>
+            <point key="canvasLocation" x="-294" y="-1196.25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Wfy-2t-MhM">
+            <objects>
+                <navigationController storyboardIdentifier="nav1" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qWb-cX-wHC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uOE-ad-U1B">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VR0-V5-H6I" kind="relationship" relationship="rootViewController" id="3AB-pF-NMw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vqC-I4-eSe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1446" y="-1179.75"/>
         </scene>
     </scenes>
 </document>

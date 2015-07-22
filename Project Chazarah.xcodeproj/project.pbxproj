@@ -10,6 +10,7 @@
 		938C2C8B1B5DE3CA00BE80A7 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938C2C8A1B5DE3CA00BE80A7 /* Log.swift */; };
 		938C2C8D1B5DE42600BE80A7 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938C2C8C1B5DE42600BE80A7 /* Book.swift */; };
 		938C2C911B5DE51400BE80A7 /* BookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 938C2C901B5DE51400BE80A7 /* BookTableViewCell.xib */; };
+		93C100231B5F0A6D00E49FEF /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C100221B5F0A6D00E49FEF /* LogViewController.swift */; };
 		93CA05DE1B536C1D00A9876C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CA05DD1B536C1D00A9876C /* AppDelegate.swift */; };
 		93CA05E11B536C1D00A9876C /* Project_Chazarah.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93CA05DF1B536C1D00A9876C /* Project_Chazarah.xcdatamodeld */; };
 		93CA05E31B536C1D00A9876C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CA05E21B536C1D00A9876C /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 		938C2C8A1B5DE3CA00BE80A7 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		938C2C8C1B5DE42600BE80A7 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		938C2C901B5DE51400BE80A7 /* BookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookTableViewCell.xib; sourceTree = "<group>"; };
+		93C100221B5F0A6D00E49FEF /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		93CA05D81B536C1D00A9876C /* Project Chazarah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Chazarah.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93CA05DC1B536C1D00A9876C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93CA05DD1B536C1D00A9876C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				93CA05E21B536C1D00A9876C /* ViewController.swift */,
+				93C100221B5F0A6D00E49FEF /* LogViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				93CA05E31B536C1D00A9876C /* ViewController.swift in Sources */,
 				938C2C8B1B5DE3CA00BE80A7 /* Log.swift in Sources */,
 				93CA05DE1B536C1D00A9876C /* AppDelegate.swift in Sources */,
+				93C100231B5F0A6D00E49FEF /* LogViewController.swift in Sources */,
 				938C2C8D1B5DE42600BE80A7 /* Book.swift in Sources */,
 				93CA05E11B536C1D00A9876C /* Project_Chazarah.xcdatamodeld in Sources */,
 			);
