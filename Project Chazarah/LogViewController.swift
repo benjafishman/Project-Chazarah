@@ -22,6 +22,7 @@ class LogViewController: UIViewController, UITableViewDataSource {
     
     var logs = [Log]()
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,7 +72,11 @@ class LogViewController: UIViewController, UITableViewDataSource {
             return cell
     }
     
+
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        
         
         println("CLICKED CELL")
         
@@ -87,5 +92,31 @@ class LogViewController: UIViewController, UITableViewDataSource {
         super.viewWillAppear(animated)
         self.tableView.reloadData()
     }
+    
+    
+    /**
+    Explanation:
+    When a user clicks the add button, they need to be presented with the add createLogView and there we must pass the Book object of which they were viewing - in this case we just pass along the book that was passed originally to this view
+    */
+    
+    @IBAction func addLogButtonPressed(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("createLogSegue", sender: self)
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        
+        
+        if(segue.identifier == "createLogSegue") {
+            
+            if let vc = segue.destinationViewController as? CreateLogViewController {
+                vc.passedBook = passedBook!
+            }
+        }
+        
+        
+    }
+    
     
 }

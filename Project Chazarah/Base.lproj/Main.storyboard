@@ -110,7 +110,8 @@
                     <navigationItem key="navigationItem" id="suP-AY-Zfv">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pZW-F6-7X0">
                             <connections>
-                                <segue destination="JKw-Hh-Jmg" kind="show" id="gYR-bL-jVR"/>
+                                <action selector="addLogButtonPressed:" destination="VR0-V5-H6I" id="dg1-bx-m8H"/>
+                                <segue destination="JKw-Hh-Jmg" kind="show" identifier="createLogSegue" id="gYR-bL-jVR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -131,6 +132,7 @@
                         <viewControllerLayoutGuide type="bottom" id="T26-gO-3bh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="C2b-aY-tMv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbt-UD-x46">

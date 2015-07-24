@@ -13,6 +13,9 @@ class CreateLogViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var logTextInput: UITextView!
     @IBOutlet weak var numberInput: UITextField!
+    
+    var passedBook : Book?
+    
     @IBAction func cancelButtonPressed(sender: AnyObject) {
     }
     
@@ -24,6 +27,8 @@ class CreateLogViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        dateLabel.text = passedBook?.getTitle()
     }
 
     override func didReceiveMemoryWarning() {
