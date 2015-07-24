@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9375112F1B61DF18004284E8 /* CreateLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9375112E1B61DF18004284E8 /* CreateLogViewController.swift */; };
 		938C2C8B1B5DE3CA00BE80A7 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938C2C8A1B5DE3CA00BE80A7 /* Log.swift */; };
 		938C2C8D1B5DE42600BE80A7 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938C2C8C1B5DE42600BE80A7 /* Book.swift */; };
 		938C2C911B5DE51400BE80A7 /* BookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 938C2C901B5DE51400BE80A7 /* BookTableViewCell.xib */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9375112E1B61DF18004284E8 /* CreateLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateLogViewController.swift; sourceTree = "<group>"; };
 		938C2C8A1B5DE3CA00BE80A7 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		938C2C8C1B5DE42600BE80A7 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		938C2C901B5DE51400BE80A7 /* BookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookTableViewCell.xib; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			children = (
 				93CA05E21B536C1D00A9876C /* ViewController.swift */,
 				93C100221B5F0A6D00E49FEF /* LogViewController.swift */,
+				9375112E1B61DF18004284E8 /* CreateLogViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9375112F1B61DF18004284E8 /* CreateLogViewController.swift in Sources */,
 				93CA05E31B536C1D00A9876C /* ViewController.swift in Sources */,
 				938C2C8B1B5DE3CA00BE80A7 /* Log.swift in Sources */,
 				93CA05DE1B536C1D00A9876C /* AppDelegate.swift in Sources */,
